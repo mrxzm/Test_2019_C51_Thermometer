@@ -2,30 +2,30 @@
 
 #define uchar unsigned char
 #define uint unsigned int
-#define DataPort P0 //ÊıÂë¹ÜÊı¾İ¶Ë¿Ú P0
-sbit LATCH1=P2^0; // 74HC573¶ÎËø
+#define DataPort P0 //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ¶Ë¿ï¿½ P0
+sbit LATCH1=P2^0; // 74HC573
 sbit DS =P3 ^ 3; // DS18B20
 
-unsigned char code dofly_DuanMa[10]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f};// ÏÔÊ¾¶ÎÂëÖµ0~9
-unsigned char code dofly_WeiMa[]={0xef, 0xdf, 0xbf, 0x7f,   0xfe,0xfd,0xfb,0xf7};//Î»Âë
+unsigned char code dofly_DuanMa[10]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f};// ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Öµ0~9
+unsigned char code dofly_WeiMa[]={0xef, 0xdf, 0xbf, 0x7f,   0xfe,0xfd,0xfb,0xf7};//æ®µç 
 
 
-unsigned int Ds_Result();//·µ»Ø×îÖÕ½á¹û
-bit DS_Init();//³õÊ¼»¯×Óº¯Êı
-void Ds_Write(unsigned char dat);//¡°Ğ´¡±×Óº¯Êı£¨ÓÃÓÚÏò×ÜÏßĞ´ÃüÁî£©
-unsigned char Ds_Read();//¡°¶Á¡±×Óº¯Êı£¨ÓÃÓÚ´Ó×ÜÏß¶ÁÖµ£©
-void Dispaly(int p1, int p2, int p3, int p4, int point);//ÊıÂë¹Ü ÏÔÊ¾ Êı×Ö
-void Delay_us(int t); // ÑÓÊ± 1us
-void Delay_ms(int t); // ÑÓÊ± 1ms
+unsigned int Ds_Result();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ½ï¿½ï¿½ï¿½
+bit DS_Init();//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Óºï¿½ï¿½ï¿½
+void Ds_Write(unsigned char dat);//ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½Óºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½î£©
+unsigned char Ds_Read();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ß¶ï¿½Öµï¿½ï¿½
+void Dispaly(int p1, int p2, int p3, int p4, int point);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ê¾ ï¿½ï¿½ï¿½ï¿½
+void Delay_us(int t); // ï¿½ï¿½Ê± 1us
+void Delay_ms(int t); // ï¿½ï¿½Ê± 1ms
 
 
 void main()
 {
-	int test = 0, num = 0; // ĞèÒªÏÔÊ¾µÄÖµ
+	int test = 0, num = 0; // ï¿½ï¿½Òªï¿½ï¿½Ê¾ï¿½ï¿½Öµ
 
-	while(1)//²»¶ÏÑ­»·ÏÔÊ¾
+	while(1)//ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½Ê¾
 	{
-		num = Ds_Result(); // ĞèÒªÏÔÊ¾µÄÖµ
+		num = Ds_Result(); // ï¿½ï¿½Òªï¿½ï¿½Ê¾ï¿½ï¿½Öµ
 
 		Dispaly(num/1000, (num%1000)/100, ((num%1000)%100)/10, ((num%1000)%100)%10, 3);
 		Delay_ms(10);
@@ -85,15 +85,15 @@ unsigned int Ds_Result()
 {
 	float tp = 0;
 	unsigned int temp = 0;
-	unsigned char LSB = 0,MSB = 0;//ÓÃÀ´´¢´æÊı¾İµÄµÚ°ËÎ»Óë¸ß°ËÎ»
-	
+	unsigned char LSB = 0,MSB = 0;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İµÄµÚ°ï¿½Î»ï¿½ï¿½ï¿½ß°ï¿½Î»
+
 	Ds_Init();
-	Ds_Write(0xCC);//Ìø¹ıROMÑ°Ö·
-	Ds_Write(0x44);//Æô¶¯Ò»´ÎÎÂ¶È×ª»»
-	
+	Ds_Write(0xCC);//ï¿½ï¿½ï¿½ï¿½ROMÑ°Ö·
+	Ds_Write(0x44);//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Â¶ï¿½×ªï¿½ï¿½
+
 	Ds_Init();
-	Ds_Write(0xCC);//Ìø¹ıÑ°Ö·
-	Ds_Write(0xBE);//·¢ËÍ¶ÁÖµÃüÁî¡¤
+	Ds_Write(0xCC);//ï¿½ï¿½ï¿½ï¿½Ñ°Ö·
+	Ds_Write(0xBE);//ï¿½ï¿½ï¿½Í¶ï¿½Öµï¿½ï¿½ï¿½î¡¤
 	LSB=Ds_Read();
 	MSB=Ds_Read();
 	temp=MSB;
@@ -109,17 +109,17 @@ unsigned int Ds_Result()
 
 
 
-///////////////////////////    ÊıÂë¹Ü      ///////////////////////////////
+///////////////////////////    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½      ///////////////////////////////
 void Dispaly(int p1, int p2, int p3, int p4, int point){
 	int i;
 	char TempData[4];
-	
-	// ¶ÎÂë
+
+	// ï¿½ï¿½ï¿½ï¿½
 	TempData[0]=dofly_DuanMa[p1];
 	TempData[1]=dofly_DuanMa[p2];
 	TempData[2]=dofly_DuanMa[p3];
-	TempData[3]=dofly_DuanMa[p4]; 
-	
+	TempData[3]=dofly_DuanMa[p4];
+
 	for(i = 0; i < 4; i++)
 	{
 		DataPort=0;
