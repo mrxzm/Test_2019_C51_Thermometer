@@ -1,0 +1,52 @@
+LABCENTER PROTEUS TOOL INFORMATION FILE
+=======================================
+
+In case of difficulty, please e-mail support@labcenter.co.uk
+
+Tool set up for Proteus layout 'test.LYT'.
+CADCAM generated at 21:18:16 on 2019Äê3ÔÂ31ÈÕ.
+
+File List
+---------
+Top Copper              : test - CADCAM Top Copper.TXT
+Bottom Copper           : test - CADCAM Bottom Copper.TXT
+Top Silk Screen         : test - CADCAM Top Silk Screen.TXT
+Top Solder Resist       : test - CADCAM Top Solder Resist.TXT
+Bottom Solder Resist    : test - CADCAM Bottom Solder Resist.TXT
+Mechanical 1            : test - CADCAM Mechanical 1.TXT
+Drill                   : test - CADCAM Drill.TXT
+
+Photoplotter Setup
+------------------
+Format: RS274X, ASCII, 2.4, imperial, absolute, eob=*, LZO
+Notes:  D=Diameter, S=Side, W=Width, H=Height
+
+D10	CIRCLE	D=40th                                      DRAW
+D11	CIRCLE	D=60th                                      DRAW
+D12	CIRCLE	D=30th                                      DRAW
+D13	CIRCLE	D=80th                                      FLASH
+D14	SQUARE	S=70th                                      FLASH
+D15	CIRCLE	D=70th                                      FLASH
+D16	CIRCLE	D=90th                                      FLASH
+D17	SQUARE	S=80th                                      FLASH
+D18	SQUARE	S=60th                                      FLASH
+D19	CIRCLE	D=8th                                       DRAW
+D70	CIRCLE	D=2.5th                                     DRAW
+D71	CIRCLE	D=100th                                     FLASH
+D20	SMT	W=90th                H=90th                FLASH
+D21	CIRCLE	D=110th                                     FLASH
+D22	SMT	W=100th               H=100th               FLASH
+D23	SMT	W=80th                H=80th                FLASH
+
+NC Drill Setup
+--------------
+Format: ASCII, 2.4, imperial, absolute, eob=<CR><LF>, no zero suppression.
+Notes:  Tool sizes are diameters. Layer sets are in brackets - 0=TOP, 15=BOTTOM, 1-14=INNER.
+
+T01	20th (0-15)
+T02	30th (0-15)
+T03	40th (0-15)
+T04	25th (0-15)
+
+
+[END OF FILE]

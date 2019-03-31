@@ -3,11 +3,11 @@
 #define uchar unsigned char
 #define uint unsigned int
 #define DataPort P0 //���������ݶ˿� P0
-sbit LATCH1=P2^0; // 74HC573
+sbit LATCH1=P2^4; // 74HC573
 sbit DS =P3 ^ 3; // DS18B20
 
 unsigned char code dofly_DuanMa[10]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f};// 位码 0~9
-unsigned char code dofly_WeiMa[]={0xef, 0xdf, 0xbf, 0x7f,   0xfe,0xfd,0xfb,0xf7};//段码
+unsigned char code dofly_WeiMa[]={0xf7,0xfe,0xfd,0xfb,    0xdf, 0xbf, 0x7f, 0xef,   };//段码
 
 
 unsigned int Ds_Result();//�������ս���

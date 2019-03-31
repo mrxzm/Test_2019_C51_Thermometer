@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        03/26/2019  22:15:31  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/31/2019  21:09:09  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
@@ -59,7 +59,7 @@ SEGMENT                           BIT_GROUP          DATA_GROUP
 ------------------------------------------------------------------
 ?C_C51STARTUP                  -----    -----      -----    -----
   +--> ?PR?MAIN?MAIN
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/26/2019  22:15:31  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/31/2019  21:09:09  PAGE 2
 
 
 
@@ -119,7 +119,7 @@ SYMBOL TABLE OF MODULE:  test (?C_STARTUP)
   N:0000H         SYMBOL        XDATALEN
   N:0000H         SYMBOL        XDATASTART
   C:0000H         LINE#         126
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/26/2019  22:15:31  PAGE 3
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/31/2019  21:09:09  PAGE 3
 
 
   C:0CB1H         LINE#         133
@@ -141,7 +141,7 @@ SYMBOL TABLE OF MODULE:  test (?C_STARTUP)
   B:00B0H.3       PUBLIC        DS
   D:00B8H         PUBLIC        IP
   C:0B8FH         PUBLIC        Ds_Result
-  B:00A0H.0       PUBLIC        LATCH1
+  B:00A0H.4       PUBLIC        LATCH1
   C:0C26H         PUBLIC        _Ds_Write
   C:0A5EH         PUBLIC        main
   C:0C55H         PUBLIC        Ds_Init
@@ -179,7 +179,7 @@ SYMBOL TABLE OF MODULE:  test (?C_STARTUP)
   C:0C57H         LINE#         39
   C:0C5EH         LINE#         40
   C:0C60H         LINE#         41
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/26/2019  22:15:31  PAGE 4
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/31/2019  21:09:09  PAGE 4
 
 
   C:0C67H         LINE#         42
@@ -239,7 +239,7 @@ SYMBOL TABLE OF MODULE:  test (?C_STARTUP)
   C:0B8FH         LINE#         84
   C:0B8FH         LINE#         85
   C:0B8FH         LINE#         86
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/26/2019  22:15:31  PAGE 5
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/31/2019  21:09:09  PAGE 5
 
 
   C:0B98H         LINE#         87
@@ -299,7 +299,7 @@ SYMBOL TABLE OF MODULE:  test (?C_STARTUP)
   C:0C7FH         LINE#         142
   C:0C7FH         LINE#         143
   C:0C7FH         LINE#         145
-BL51 BANKED LINKER/LOCATER V6.22                                                      03/26/2019  22:15:31  PAGE 6
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/31/2019  21:09:09  PAGE 6
 
 
   C:0C8AH         LINE#         146
